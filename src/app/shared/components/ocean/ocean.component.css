@@ -1,0 +1,170 @@
+:host {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.ocean {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ===========================
+            SKY
+=========================== */
+
+.sky {
+    height: 45vh;
+    background:
+        linear-gradient(to bottom,
+            #87CEEB,
+            #5eb9ff,
+            #3ea5ff);
+
+    position: relative;
+}
+
+/* ===========================
+            SUN
+=========================== */
+
+.sun {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background:
+        radial-gradient(circle,
+            #fff59d,
+            #ffd54f,
+            #ffca28);
+    position: absolute;
+    top: 70px;
+    right: 140px;
+    box-shadow:
+        0 0 140px rgba(255, 213, 79, .8);
+}
+
+
+/* ===========================
+          CLOUD
+=========================== */
+
+
+.cloud {
+    position: absolute;
+    background: white;
+    border-radius: 50px;
+    opacity: .9;
+}
+
+.cloud::before,
+.cloud::after {
+    content: "";
+    position: absolute;
+    background: white;
+    border-radius: 50%;
+}
+
+.cloud-1 {
+    width: 170px;
+    height: 55px;
+    top: 80px;
+    left: 8%;
+}
+
+.cloud-1::before {
+    width: 70px;
+    height: 70px;
+    left: 20px;
+    top: -25px;
+}
+
+.cloud-1::after {
+    width: 90px;
+    height: 90px;
+    right: 20px;
+    top: -40px;
+}
+
+.cloud-2 {
+    width: 120px;
+    height: 45px;
+    top: 180px;
+    right: 12%;
+}
+
+.cloud-2::before {
+    width: 55px;
+    height: 55px;
+    top: -18px;
+    left: 18px;
+
+}
+
+.cloud-2::after {
+    width: 65px;
+    height: 65px;
+    right: 18px;
+    top: -25px;
+}
+
+.cloud-3 {
+    width: 140px;
+    height: 50px;
+    top: 140px;
+    left: 46%;
+}
+
+.cloud-3::before {
+    width: 60px;
+    height: 60px;
+    left: 18px;
+    top: -20px;
+}
+
+.cloud-3::after {
+    width: 70px;
+    height: 70px;
+    right: 15px;
+    top: -28px;
+}
+
+/* ===========================
+        SURFACE
+=========================== */
+
+.surface {
+    position: relative;
+    height: 18px;
+    background: #ffffff;
+}
+
+.wave {
+    position: absolute;
+    width: 100%;
+    height: 35px;
+    top: -18px;
+    background:
+        radial-gradient(circle at 20px 20px,
+            transparent 18px,
+            white 20px);
+
+    background-size: 40px 35px;
+}
+
+/* ===========================
+          WATER
+=========================== */
+
+.water {
+    height: 55vh;
+    background:
+        linear-gradient(to bottom,
+            #0077b6,
+            #005b8c,
+            #003b5c,
+            #001b2d);
+
+}
