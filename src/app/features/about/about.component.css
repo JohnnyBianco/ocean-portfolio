@@ -1,0 +1,29 @@
+.section{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:#011d31;
+
+}
+
+.container{
+
+    width:min(1200px,90%);
+
+    margin:auto;
+
+}
+
+h2{
+
+    font-size:4rem;
+
+    color:white;
+
+}

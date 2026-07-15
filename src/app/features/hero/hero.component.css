@@ -26,33 +26,35 @@
 
     text-align:center;
 
-    z-index:10;
+    z-index:100;
 
-    padding:2rem;
+    padding-inline:2rem;
 
 }
 
-.subtitle{
+.hero-tag{
 
     color:white;
 
-    letter-spacing:4px;
-
-    text-transform:uppercase;
+    letter-spacing:5px;
 
     font-size:.9rem;
 
-    margin-bottom:1rem;
+    margin-bottom:1.5rem;
+
+    opacity:.9;
 
 }
 
 h1{
 
-    font-size:clamp(4rem,9vw,7rem);
+    font-size:clamp(4rem,10vw,8rem);
+
+    line-height:.9;
 
     color:white;
 
-    line-height:1;
+    font-weight:800;
 
 }
 
@@ -64,37 +66,37 @@ h1 span{
 
 }
 
-.description{
-
-    max-width:700px;
+p{
 
     margin-top:2rem;
 
-    line-height:1.7;
+    max-width:700px;
 
-    font-size:1.1rem;
+    line-height:1.8;
 
     color:white;
 
+    font-size:1.15rem;
+
 }
 
-button{
+.hero-actions{
 
     margin-top:3rem;
 
-    border:none;
+}
+
+.primary{
 
     cursor:pointer;
 
-    background:white;
-
-    color:#003b5c;
+    border:none;
 
     padding:
 
-    18px
+    20px
 
-    38px;
+    42px;
 
     border-radius:999px;
 
@@ -102,12 +104,96 @@ button{
 
     font-weight:700;
 
-    transition:.3s;
+    background:white;
+
+    color:#003b5c;
+
+    transition:.35s;
 
 }
 
-button:hover{
+.primary:hover{
 
-    transform:translateY(-3px);
+    transform:translateY(-4px);
+
+}
+
+.scroll-indicator{
+
+    position:absolute;
+
+    bottom:50px;
+
+}
+
+.scroll-indicator span{
+
+    display:block;
+
+    width:30px;
+
+    height:50px;
+
+    border:
+
+    2px
+
+    solid
+
+    white;
+
+    border-radius:20px;
+
+    position:relative;
+
+}
+
+.scroll-indicator span::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:50%;
+
+    top:10px;
+
+    width:5px;
+
+    height:10px;
+
+    background:white;
+
+    border-radius:10px;
+
+    transform:translateX(-50%);
+
+    animation:
+
+    scroll
+
+    2s
+
+    infinite;
+
+}
+
+@keyframes scroll{
+
+    0%{
+
+        opacity:1;
+
+        top:10px;
+
+    }
+
+    100%{
+
+        opacity:0;
+
+        top:28px;
+
+    }
 
 }

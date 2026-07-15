@@ -1,0 +1,17 @@
+:host{
+
+    display:block;
+
+    position:relative;
+
+}
+
+.content{
+
+    position:absolute;
+
+    inset:0;
+
+    z-index:100;
+
+}
