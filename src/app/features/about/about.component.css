@@ -1,29 +1,45 @@
-.section{
+.section {
 
-    min-height:100vh;
+    min-height: 100vh;
 
-    display:flex;
+    display: flex;
 
-    justify-content:center;
+    align-items: center;
 
-    align-items:center;
-
-    background:#011d31;
+    justify-content: center;
 
 }
 
-.container{
+.container {
 
-    width:min(1200px,90%);
-
-    margin:auto;
+    width: min(1100px,90%);
 
 }
 
-h2{
+span {
 
-    font-size:4rem;
+    color: #4fc3f7;
 
-    color:white;
+    font-size: 1.1rem;
+
+}
+
+h2 {
+
+    color: white;
+
+    font-size: clamp(3rem,7vw,5rem);
+
+    margin: 15px 0;
+
+}
+
+p {
+
+    color: white;
+
+    max-width: 700px;
+
+    line-height: 1.8;
 
 }

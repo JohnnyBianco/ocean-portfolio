@@ -70,7 +70,7 @@ p{
 
     margin-top:2rem;
 
-    max-width:700px;
+    max-width:650px;
 
     line-height:1.8;
 
@@ -109,12 +109,18 @@ p{
     color:#003b5c;
 
     transition:.35s;
+    box-shadow:
+
+0 20px 40px rgba(0,0,0,.20);
 
 }
 
 .primary:hover{
 
     transform:translateY(-4px);
+    box-shadow:
+
+0 30px 50px rgba(0,0,0,.30);
 
 }
 
