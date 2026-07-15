@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { OceanComponent } from '../../shared/components/ocean/ocean.component';
 
 @Component({
@@ -9,5 +9,14 @@ import { OceanComponent } from '../../shared/components/ocean/ocean.component';
   styleUrl: './hero.component.css'
 })
 export class HeroComponent {
+
+  scroll = 0;
+
+  @HostListener('window:scroll')
+  onScroll() {
+
+    this.scroll = window.scrollY;
+
+  }
 
 }
