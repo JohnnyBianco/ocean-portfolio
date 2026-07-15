@@ -4,11 +4,40 @@
     height: 100%;
 }
 
-.ocean {
-    width: 100%;
-    min-height:700vh;
-    position: relative;
-    overflow: hidden;
+.ocean{
+
+    position:relative;
+
+    width:100%;
+
+    min-height:100vh;
+
+    overflow:hidden;
+
+    background:
+
+    linear-gradient(
+
+        180deg,
+
+        #8dd9ff 0%,
+
+        #5ebcff 10%,
+
+        #268ed5 22%,
+
+        #0a629d 38%,
+
+        #044979 55%,
+
+        #033760 72%,
+
+        #022847 88%,
+
+        #01192f 100%
+
+    );
+
 }
 
 /* ===========================

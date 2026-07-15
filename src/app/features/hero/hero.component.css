@@ -35,6 +35,10 @@ overflow:hidden;
 
 }
 
+
+
+
+
 .overlay{
 
     position:absolute;
@@ -78,7 +82,9 @@ overflow:hidden;
 
     border-radius:30px;
 
-    background:rgba(2,18,38,.15);
+    background:
+
+rgba(2,18,38,.28);
 
     backdrop-filter:blur(10px);
 
@@ -722,6 +728,20 @@ p{
 
     overflow:hidden;
 
+clip-path:
+
+polygon(
+
+0 46%,
+
+100% 46%,
+
+100% 100%,
+
+0 100%
+
+);
+
     pointer-events:none;
 
     z-index:1;
@@ -730,6 +750,7 @@ p{
     translateZ(-50px)
 
     scale(1.08);
+    opacity:.55;
 
 }
 
@@ -749,15 +770,15 @@ p{
 
     background:
 
-        linear-gradient(
+linear-gradient(
 
-            rgba(255,255,255,.22),
+rgba(255,255,255,.06),
 
-            transparent
+transparent
 
-        );
+);
 
-    filter:blur(45px);
+    filter:blur(80px);
 
     transform:rotate(18deg);
 
