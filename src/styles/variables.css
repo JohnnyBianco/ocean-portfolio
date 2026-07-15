@@ -1,0 +1,38 @@
+:root {
+
+  /* ========= COLORS ========= */
+
+  --white: #ffffff;
+  --black: #000000;
+
+  --ocean-50: #eef9ff;
+  --ocean-100: #d6f1ff;
+  --ocean-200: #ade3ff;
+  --ocean-300: #74d1ff;
+  --ocean-400: #2db9ff;
+  --ocean-500: #0099e6;
+  --ocean-600: #0077b6;
+  --ocean-700: #005b8c;
+  --ocean-800: #003b5c;
+  --ocean-900: #001b2d;
+
+  /* ========= TEXT ========= */
+
+  --text-primary: #ffffff;
+  --text-secondary: #d4e6f1;
+
+  /* ========= BACKGROUND ========= */
+
+  --background-page: #001b2d;
+
+  /* ========= RADIUS ========= */
+
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+
+  /* ========= SHADOW ========= */
+
+  --shadow-default: 0 10px 30px rgba(0,0,0,.35);
+
+}
