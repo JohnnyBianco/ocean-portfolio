@@ -36,17 +36,24 @@
 
     background:
 
-    linear-gradient(
+        radial-gradient(
+            circle at 80% 20%,
+            rgba(72,170,255,.18),
+            transparent 30%
+        ),
 
-        90deg,
+        radial-gradient(
+            circle at 30% 80%,
+            rgba(0,80,180,.22),
+            transparent 40%
+        ),
 
-        rgba(2,12,27,.88),
-
-        rgba(2,12,27,.45),
-
-        rgba(2,12,27,.10)
-
-    );
+        linear-gradient(
+            90deg,
+            rgba(1,12,25,.88) 0%,
+            rgba(1,12,25,.55) 45%,
+            rgba(1,12,25,.20) 100%
+        );
 
 }
 
@@ -54,11 +61,27 @@
 
     position:relative;
 
-    z-index:2;
+    z-index:10;
 
     width:min(680px,90%);
 
-    margin-left:clamp(24px,8vw,120px);
+    margin-left:clamp(30px,7vw,120px);
+
+    padding:40px;
+
+    border-radius:30px;
+
+    background:rgba(2,18,38,.15);
+
+    backdrop-filter:blur(10px);
+
+    border:1px solid rgba(255,255,255,.08);
+
+    box-shadow:
+
+        0 30px 80px rgba(0,0,0,.30);
+
+    animation:heroFade 1.2s ease;
 
 }
 
@@ -76,15 +99,19 @@
 
 h1{
 
-    margin-top:20px;
+    margin-top:18px;
 
-    font-size:clamp(5rem,10vw,8rem);
+    font-size:clamp(5.5rem,11vw,9rem);
 
-    line-height:.88;
+    line-height:.82;
 
     font-weight:900;
 
     color:white;
+
+    text-shadow:
+
+        0 8px 30px rgba(0,0,0,.35);
 
 }
 
@@ -98,9 +125,11 @@ h1 span{
 
         180deg,
 
-        #6ec8ff,
+        #8fd8ff,
 
-        #1c92ff
+        #52a9ff,
+
+        #0b6dff
 
     );
 
@@ -112,23 +141,25 @@ h1 span{
 
 h2{
 
-    margin-top:25px;
+    margin-top:28px;
 
-    font-size:2rem;
+    color:#79c7ff;
 
-    color:white;
+    font-size:1.7rem;
 
-    font-weight:600;
+    font-weight:500;
 
 }
 
 p{
 
-    margin-top:25px;
+    margin-top:30px;
 
-    color:#d6e8f5;
+    max-width:620px;
 
-    line-height:1.9;
+    color:#d9e7f8;
+
+    line-height:1.8;
 
     font-size:1.1rem;
 
@@ -158,6 +189,10 @@ p{
 
 .primary{
 
+    position:relative;
+
+    overflow:hidden;
+
     padding:18px 38px;
 
     border-radius:999px;
@@ -180,13 +215,21 @@ p{
 
     box-shadow:
 
-    0 20px 40px rgba(0,86,255,.35);
+        0 20px 40px rgba(0,86,255,.35);
+        letter-spacing:.5px;
 
 }
 
 .primary:hover{
 
-    transform:translateY(-4px);
+    transform:
+
+        translateY(-5px)
+        scale(1.03);
+
+    box-shadow:
+
+        0 35px 60px rgba(0,98,255,.45);
 
 }
 
@@ -218,25 +261,45 @@ p{
 
     flex-wrap:wrap;
 
-    gap:14px;
+    gap:12px;
 
-    margin-top:45px;
+    margin-top:35px;
 
 }
 
 .stack span{
 
-    padding:10px 18px;
+    padding:12px 20px;
 
     border-radius:999px;
 
+    background:
+
+        rgba(255,255,255,.08);
+
+    border:
+
+        1px solid rgba(255,255,255,.10);
+
+    backdrop-filter:blur(20px);
+
     color:white;
 
-    background:rgba(255,255,255,.08);
+    font-size:.92rem;
 
-    backdrop-filter:blur(14px);
+    transition:.35s;
 
-    border:1px solid rgba(255,255,255,.12);
+}
+
+.stack span:hover{
+
+    transform:
+
+        translateY(-4px);
+
+    background:
+
+        rgba(255,255,255,.18);
 
 }
 
@@ -244,9 +307,9 @@ p{
 
     position:absolute;
 
-    left:50%;
+    bottom:30px;
 
-    bottom:35px;
+    left:50%;
 
     transform:translateX(-50%);
 
@@ -258,7 +321,9 @@ p{
 
     color:white;
 
-    z-index:2;
+    z-index:5;
+
+    opacity:.85;
 
 }
 
@@ -335,6 +400,7 @@ p{
         justify-content:center;
 
         text-align:center;
+        isolation:isolate;
 
     }
 
@@ -380,6 +446,260 @@ p{
     .stack{
 
         justify-content:center;
+
+    }
+
+}
+
+/* ==========================
+        LIGHT RAYS
+========================== */
+
+.light{
+
+    position:absolute;
+
+    top:-300px;
+
+    width:350px;
+
+    height:180%;
+
+    background:
+
+    linear-gradient(
+
+        rgba(255,255,255,.20),
+
+        transparent
+
+    );
+
+    filter:blur(45px);
+
+    transform:rotate(18deg);
+
+    animation:lightMove 8s ease-in-out infinite;
+
+}
+
+.light-1{
+
+    left:10%;
+
+}
+
+.light-2{
+
+    left:45%;
+
+    animation-delay:2s;
+
+}
+
+.light-3{
+
+    right:5%;
+
+    animation-delay:4s;
+
+}
+
+/* ==========================
+        BUBBLES
+========================== */
+
+.bubble{
+
+    position:absolute;
+
+    bottom:-120px;
+
+    border-radius:50%;
+
+    background:
+
+    rgba(255,255,255,.15);
+
+    backdrop-filter:blur(4px);
+
+    animation:bubbleUp linear infinite;
+
+}
+
+.bubble-1{
+
+    width:18px;
+
+    height:18px;
+
+    left:12%;
+
+    animation-duration:10s;
+
+}
+
+.bubble-2{
+
+    width:10px;
+
+    height:10px;
+
+    left:30%;
+
+    animation-duration:7s;
+
+}
+
+.bubble-3{
+
+    width:22px;
+
+    height:22px;
+
+    left:60%;
+
+    animation-duration:12s;
+
+}
+
+.bubble-4{
+
+    width:12px;
+
+    height:12px;
+
+    left:82%;
+
+    animation-duration:9s;
+
+}
+
+.bubble-5{
+
+    width:28px;
+
+    height:28px;
+
+    left:70%;
+
+    animation-duration:15s;
+
+}
+
+@keyframes bubbleUp{
+
+    from{
+
+        transform:
+
+        translateY(0);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:
+
+        translateY(-1200px);
+
+        opacity:0;
+
+    }
+
+}
+
+@keyframes lightMove{
+
+    0%{
+
+        transform:
+
+        rotate(18deg)
+
+        translateX(0);
+
+    }
+
+    50%{
+
+        transform:
+
+        rotate(16deg)
+
+        translateX(40px);
+
+    }
+
+    100%{
+
+        transform:
+
+        rotate(18deg)
+
+        translateX(0);
+
+    }
+
+}
+
+.primary::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:-50%;
+
+    left:-150px;
+
+    width:90px;
+
+    height:220%;
+
+    background:
+
+        rgba(255,255,255,.28);
+
+    transform:rotate(28deg);
+
+    transition:left .8s;
+
+}
+
+.primary:hover::before{
+
+    left:160%;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:
+
+            translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:
+
+            translateY(0);
 
     }
 
