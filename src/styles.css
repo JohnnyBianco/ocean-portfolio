@@ -26,3 +26,80 @@ img{
 button{
     font:inherit;
 }
+
+html {
+
+    scroll-behavior: smooth;
+
+}
+
+html,
+body {
+
+    margin: 0;
+    padding: 0;
+
+    background: #010d18;
+
+    overflow-x: hidden;
+
+}
+
+body {
+
+    background:
+
+        linear-gradient(
+
+            180deg,
+
+            #89d8ff 0%,
+
+            #59b8ff 8%,
+
+            #2a8dd4 15%,
+
+            #0d5f99 25%,
+
+            #033f67 40%,
+
+            #022948 55%,
+
+            #011a30 70%,
+
+            #000f1d 82%,
+
+            #00070f 100%
+
+        );
+
+}
+
+body {
+
+    animation:
+
+        oceanBreathing 18s ease-in-out infinite;
+
+}
+@keyframes oceanBreathing {
+
+    0% {
+
+        filter: brightness(1);
+
+    }
+
+    50% {
+
+        filter: brightness(.95);
+
+    }
+
+    100% {
+
+        filter: brightness(1);
+
+    }
+
+}
